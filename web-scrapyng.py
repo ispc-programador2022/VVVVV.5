@@ -45,3 +45,5 @@ df = pd.DataFrame(data={'Fecha': fecha, 'Latitud': latitud, 'Longitud': longitud
 #print(df)
 
 df.to_excel('sismos.xlsx')
+
+#probando exportar datos dataframe (error)

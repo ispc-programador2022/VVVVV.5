@@ -44,6 +44,8 @@ for row in rows:
 df = pd.DataFrame(data={'Fecha': fecha, 'Latitud': latitud, 'Longitud': longitud, 'Magnitud': magnitud, 'Profundidad': profundidad})
 #print(df)
 
-df.to_excel('sismos.xlsx')
+#generamos dos archivos en excel y csv, (sin columna de indice) nos muetra columna Fecha, latitud, longitud y profundidad
+df.to_excel('sismos.xlsx', index=False)
 
-#probando exportar datos dataframe (error)
+dframe.to_csv('sismos.csv',index=False,encoding='latin1')
+

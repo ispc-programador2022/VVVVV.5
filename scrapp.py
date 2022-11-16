@@ -7,25 +7,25 @@ pagina = requests.get(url)
 soup = BeautifulSoup(pagina.content, 'html.parser')
 
 # regiones donde ocurrieron ultimos sismos
-lugar = soup.find_all('td', class_ = 'region')
-#print(terrem)
+#lugar = soup.find_all('td', class_ = 'region')
+#print(lugar)
 
-lugares = list()
+#lugares = list()
 
-for i in lugar:
- lugares.append(i.text)
-print(lugares)
+#for i in lugar:
+ #lugares.append(i.text)
+#print(lugares)
 
 
 #resultados de la escala de magnitudes
-magnit = soup.find_all('td', class_ ='mag')
+#magnit = soup.find_all('td', class_ ='mag')
 
-magnitud = list()
+#magnitud = list()
 
-for i in magnit:
-    magnitud.append(i.text)
+#for i in magnit:
+    #magnitud.append(i.text)
 
 #print(magnitud)    
 
-# ahora comparar y obtener el terremoto de magnitud mas alta.
+
 

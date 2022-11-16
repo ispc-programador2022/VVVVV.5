@@ -2,7 +2,8 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd 
-import xlrd
+import lxml
+
 
 #del sitio elegido traemos el contenido
 website = 'http://www.iris.washington.edu/latin_am/evlist.phtml?region=mundo'
@@ -43,4 +44,4 @@ for row in rows:
 df = pd.DataFrame(data={'Fecha': fecha, 'Latitud': latitud, 'Longitud': longitud, 'Magnitud': magnitud, 'Profundidad': profundidad})
 #print(df)
 
-df.to_excel('sismos.csv')
+df.to_excel('sismos.xlsx')

@@ -26,3 +26,4 @@ print(c.fetchall())
 conn.commit
 conn.close
 
+# extructura creada falta carga de datos

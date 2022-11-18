@@ -2,7 +2,7 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd 
-import xlrd
+
 
 #del sitio elegido traemos el contenido
 website = 'http://www.iris.washington.edu/latin_am/evlist.phtml?region=mundo'

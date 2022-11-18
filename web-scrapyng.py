@@ -45,7 +45,7 @@ df = pd.DataFrame(data={'Fecha': fecha, 'Latitud': latitud, 'Longitud': longitud
 #print(df)
 
 #generamos dos archivos en excel y csv, (sin columna de indice) nos muetra columna Fecha, latitud, longitud y profundidad
-df.to_excel('sismos.xlsx', index=False)
+df.to_excel('C:/Users/USUARIO/Documents/marcela/Tecnicatura Cs de Datos/Proyecto-Integrador/proyecto-final/salida/sismos.xlsx', index=False)
 
-dframe.to_csv('sismos.csv',index=False,encoding='latin1')
+df.to_csv('C:/Users/USUARIO/Documents/marcela/Tecnicatura Cs de Datos/Proyecto-Integrador/proyecto-final/salida/sismos.csv',index=False,encoding='latin1')
 

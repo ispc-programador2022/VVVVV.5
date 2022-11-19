@@ -24,6 +24,6 @@ for row in rows:
 
 #generamos un data frame para tabular los datos a mostrar e imprimo
 dframe = pd.DataFrame(data={'Region': region})
-dframe.to_excel('regiones.xlsx', index=False)
-dframe.to_csv('regiones.csv',index=False,encoding='latin1')
+dframe.to_excel('C:/Users/USUARIO/Documents/GitHub/VVVVV.5/salida/regiones.xlsx', index=False)
+dframe.to_csv('C:/Users/USUARIO/Documents/GitHub/VVVVV.5/salida/regiones.csv',index=False,encoding='latin1')
 print(dframe)

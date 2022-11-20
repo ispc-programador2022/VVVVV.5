@@ -1,8 +1,10 @@
+#programa que levanta datos seleccionados de una tabla de datos en un sitio de sismos-terremotos en el mundo
 #se importa las librerias necesarias
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd 
 import lxml
+import datetime as dt
 
 #del sitio elegido traemos el contenido
 website = 'http://www.iris.washington.edu/latin_am/evlist.phtml?region=mundo'
@@ -33,7 +35,8 @@ profundidad =[]
 
 #recorremos cada fila de la tabla y guardamos los datos agrupados por cada lista
 for row in rows:
-    fecha.append(row.find_all('td')[0].get_text())
+    #formateamos a formato fecha y hora
+    fecha=dt.datetime.strptime(str(row.find_all('td')[0].get_text().strip()),'%d-%b-%Y %H:%M:%S')
     latitud.append(row.find_all('td')[1].get_text())
     longitud.append(row.find_all('td')[2].get_text())
     magnitud.append(row.find_all('td')[3].get_text())
@@ -41,10 +44,8 @@ for row in rows:
 
 #generamos un data frame para tabular los datos a mostrar e imprimo
 df = pd.DataFrame(data={'Fecha': fecha, 'Latitud': latitud, 'Longitud': longitud, 'Magnitud': magnitud, 'Profundidad': profundidad})
-#print(df)
+print(df)
 
 #generamos dos archivos en excel y csv, (sin columna de indice) nos muetra columna Fecha, latitud, longitud y profundidad
-df.to_excel('C:/Users/USUARIO/Documents/GitHub/VVVVV.5/salida/sismos.xlsx', index=False)
-
-df.to_csv('C:/Users/USUARIO/Documents/GitHub/VVVVV.5/salida/sismos.csv',index=False,encoding='latin1')
-
+df.to_excel('C:/Users/USUARIO/Documents/GitHub/VVVVV.5/salida/sismos.xlsx', index=False,encoding='utf-8')
+df.to_csv('C:/Users/USUARIO/Documents/GitHub/VVVVV.5/salida/sismos.csv',index=False,encoding='utf-8')

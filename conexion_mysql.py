@@ -1,3 +1,4 @@
+#programa que estable la conexión a la base de datos e inserta los usuarios de login
 #importamos libreria para conectar la bd en MySql
 import mysql.connector
 
@@ -22,7 +23,7 @@ try:
     insertar="insert into usuarios values(1005, 'Alejandro Toloza', 'AT1005')"
     cur01.execute(insertar)
     conexion.commit()
-except Exception as err:
+except Exception as err: 
     print('Error insertando datos en la tabla Usuarios', err)
 else:
     print('Datos insertados correctamente en la tabla Usuarios')

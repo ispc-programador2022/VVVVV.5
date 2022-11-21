@@ -36,7 +36,7 @@ profundidad =[]
 #recorremos cada fila de la tabla y guardamos los datos agrupados por cada lista
 for row in rows:
     #formateamos a formato fecha y hora
-    fecha=dt.datetime.strptime(str(row.find_all('td')[0].get_text().strip()),'%d-%b-%Y %H:%M:%S')
+    fecha.append(dt.datetime.strptime(str(row.find_all('td')[0].get_text().strip()),'%d-%b-%Y %H:%M:%S'))
     latitud.append(row.find_all('td')[1].get_text())
     longitud.append(row.find_all('td')[2].get_text())
     magnitud.append(row.find_all('td')[3].get_text())

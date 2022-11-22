@@ -10,3 +10,6 @@ permita manipular los mismos.Por último, con dicha información, realizar un in
 a través de la comparación entre elementos recolectados de las diferentes fuentes,
 estadísticos sobre las series de los datos o cualquier tipo de análisis del tipo Big Data o
 Machine Learning, como regresiones, proyecciones, etc
+
+## VIDEO PRESENTACIÓN PROYECTO INTEGRADOR
+[video presentación](https://drive.google.com/file/d/1Rh1A6c54UuEGgHQBxtckjNka6oGITfIZ/view)
